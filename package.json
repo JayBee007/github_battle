@@ -1,0 +1,26 @@
+{
+  "name": "gitbattle",
+  "version": "0.0.1",
+  "description": "React App Github Battle",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JayBee007/github_battle.git"
+  },
+  "keywords": [
+    "react",
+    "github",
+    "battle",
+    "webpack",
+    "babel"
+  ],
+  "author": "Javed",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JayBee007/github_battle/issues"
+  },
+  "homepage": "https://github.com/JayBee007/github_battle#readme"
+}
