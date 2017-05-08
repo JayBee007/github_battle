@@ -22,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/JayBee007/github_battle/issues"
   },
-  "homepage": "https://github.com/JayBee007/github_battle#readme"
+  "homepage": "https://github.com/JayBee007/github_battle#readme",
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  }
 }
