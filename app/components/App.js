@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
-
+import Popular from './Popular'
 class App extends Component {
     render(){
         return (
-            <h1>Hello from App!</h1>
+            <div className="container">
+                <Popular />
+            </div>
         )
     }
 }
