@@ -4,7 +4,7 @@
   "description": "React App Github Battle",
   "main": "app.js",
   "scripts": {
-    "create" :"webpack",
+    "start" :"webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
