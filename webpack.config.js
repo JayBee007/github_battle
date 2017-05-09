@@ -1,17 +1,34 @@
-import webpack from 'webpack';
-import path from 'path';
+var webpack = require('webpack');
+var path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
-export default {
+module.exports = {
     entry : './app/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'index_bundle..js'
+        filename: 'index_bundle.js'
     },
-    module : {
+    module: {
         rules: [
-            {test: /\.(js)$/, use: 'babel-loader'},
-            {test: /\.css$/, use: ['style-loader','css-loader']}
+            {
+                test: /\.js$/,
+                use:[{loader:'babel-loader',
+                     options: {presets:['es2015', 'react']}
+                    }],
+                exclude: /node_modules/
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
+            }
         ]
     },
-    
+    resolve:{
+        extensions:[".js",".jsx"]
+    },
+    plugins:[new HtmlWebpackPlugin({
+        template: 'app/index.html'
+
+    })]
+
 }
