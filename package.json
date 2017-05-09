@@ -4,7 +4,7 @@
   "description": "React App Github Battle",
   "main": "app.js",
   "scripts": {
-    "start" :"webpack-dev-server",
+    "start": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/JayBee007/github_battle#readme",
   "dependencies": {
+    "prop-types": "^15.5.8",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },
