@@ -30,9 +30,12 @@ class Popular extends Component {
                     selectedLanguage = {this.state.selectedLanguage}
                     onSelect = {this.updateLanguage} 
                 />
-                <RepoGridPopular 
+                {!this.state.repos
+                 ? <h1>Loading...</h1>
+                 : <RepoGridPopular 
                     repos={this.state.repos}
-                />
+                />}
+                
             </div>
         )        
     }
