@@ -49,3 +49,8 @@ li{
     width:150px;
     border-radius:50%;
 }
+
+.row{
+    display:flex;
+    justify-content: space-around;
+}
