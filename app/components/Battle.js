@@ -39,10 +39,10 @@ class PlayerInput extends Component {
                     value = {this.state.username}
                     onChange = {this.handleChange}
                 />
-                <button>
+                <button
                     className = 'button'
                     type = 'submit'
-                    disabled = {!this.state.username}
+                    disabled = {!this.state.username}>                    
                         Submit
                 </button>
             </form>
