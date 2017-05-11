@@ -62,3 +62,7 @@ li{
 .active {
     font-weight: bold;
 }
+
+.nav li {
+    margin-right: 15px;
+}
