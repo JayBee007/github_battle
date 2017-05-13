@@ -16,7 +16,7 @@ class App extends Component {
                     <Nav />
                     <Switch>
                         <Route exact path ='/' component = {Home} />
-                        <Route path ='/popular' component = {Popular} />
+                        <Route exact path ='/popular' component = {Popular} />
                         <Route path ='/battle' component = {Battle} />
                         <Route render = {NotFound} />
                     </Switch>
