@@ -5,14 +5,14 @@ let params = `?client_id=${ID}&client_secret=${SECRET}`
 let url = `https://api.github.com/users/`
 
 function getProfile(username) {
-    return axios.get(`url${username}${params}`)
+    return axios.get(`${url}${username}${params}`)
         .then(user => {
             return user.data
         })
 }
 
 function getRepos(username) {
-    return axios.get(`url${username}/repos${params}&per_page=100`)
+    return axios.get(`${url}${username}/repos${params}&per_page=100`)
 }
 
 function getStarCount(repos) {
@@ -40,6 +40,8 @@ function getUserData(player){
     ]).then(data => {
         let profile = data[0]
         let repos = data[1]
+
+        let score = calculateScore(profile, repos)
 
         return {profile, score}
     })
