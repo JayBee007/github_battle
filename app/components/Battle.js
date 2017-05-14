@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 import PropTypes from 'prop-types'
 import {Link} from 'react-router-dom'
 
+import PlayerPreview from './PlayerPreview'
+
 // Player Input
 class PlayerInput extends Component {
     constructor(props){
@@ -109,10 +111,12 @@ class Battle extends Component {
                 {playerOneImage !==null && 
                     <PlayerPreview 
                         avatar = {playerOneImage}
-                        username = {playerOneName}
-                        onReset = {this.handleReset}
-                        id = 'playerOne'
-                    />}
+                        username = {playerOneName}>
+
+                        <button className = 'button' onClick =  {this.handleReset.bind(null,'playerOne')}>
+                            Reset
+                        </button>
+                    </PlayerPreview>}
 
                     {!playerTwoName &&
                     <PlayerInput
@@ -123,10 +127,12 @@ class Battle extends Component {
                     {playerTwoImage !==null && 
                     <PlayerPreview 
                         avatar = {playerTwoImage}
-                        username = {playerTwoName}
-                        onReset = {this.handleReset}
-                        id = 'playerTwo'
-                    />}
+                        username = {playerTwoName}>
+
+                        <button className = 'button' onClick =  {this.handleReset.bind(null,'playerTwo')}>
+                            Reset
+                        </button>
+                    </PlayerPreview>}}
                 </div>
                 {playerOneImage && playerTwoImage &&
                     <Link className = 'button' to = {{
