@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
+import {Link} from 'react-router-dom'
 
 function PlayerPreview (props) {
     return (
@@ -115,39 +116,50 @@ class Battle extends Component {
         this.setState(newState);
     }
     render(){
+        let {match} = this.props
         let {playerOneName,
             playerTwoName,
             playerOneImage,
-            playerTwoImage} = this.state;
+            playerTwoImage} = this.state
         return(
-            <div className="row">
-                {!playerOneName &&
-                <PlayerInput
-                id= 'playerOne'
-                label = 'Player One'
-                onSubimt = {this.handleSubmit} />}
-            
-            {playerOneImage !==null && 
-                <PlayerPreview 
-                    avatar = {playerOneImage}
-                    username = {playerOneName}
-                    onReset = {this.handleReset}
-                    id = 'playerOne'
-                />}
+            <div>
+                <div className="row">
+                    {!playerOneName &&
+                    <PlayerInput
+                    id= 'playerOne'
+                    label = 'Player One'
+                    onSubimt = {this.handleSubmit} />}
+                
+                {playerOneImage !==null && 
+                    <PlayerPreview 
+                        avatar = {playerOneImage}
+                        username = {playerOneName}
+                        onReset = {this.handleReset}
+                        id = 'playerOne'
+                    />}
 
-                {!playerTwoName &&
-                <PlayerInput
-                id= 'playerTwo'
-                label = 'Player Two'
-                onSubimt = {this.handleSubmit} />}
+                    {!playerTwoName &&
+                    <PlayerInput
+                    id= 'playerTwo'
+                    label = 'Player Two'
+                    onSubimt = {this.handleSubmit} />}
 
-                {playerTwoImage !==null && 
-                <PlayerPreview 
-                    avatar = {playerTwoImage}
-                    username = {playerTwoName}
-                    onReset = {this.handleReset}
-                    id = 'playerTwo'
-                />}
+                    {playerTwoImage !==null && 
+                    <PlayerPreview 
+                        avatar = {playerTwoImage}
+                        username = {playerTwoName}
+                        onReset = {this.handleReset}
+                        id = 'playerTwo'
+                    />}
+                </div>
+                {playerOneImage && playerTwoImage &&
+                    <Link className = 'button' to = {{
+                        pathname : `${match.url}/results`,
+                        search : `?playerOneName=${playerOneName}&playerTwoName=${playerTwoName}`
+                    }}>
+                        Battle
+                    </Link>
+                }
             </div>
         )
     }
