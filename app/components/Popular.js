@@ -33,7 +33,7 @@ class Popular extends Component {
                     onSelect = {this.updateLanguage} 
                 />
                 {!this.state.repos
-                 ? <Loading />
+                 ? <Loading speed = '500' />
                  : <RepoGridPopular 
                     repos={this.state.repos}
                 />}

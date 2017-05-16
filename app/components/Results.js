@@ -86,7 +86,7 @@ class Results extends Component {
         
         if (loading === true) {
             return(
-                <Loading />
+                <Loading text = 'Results Loading'/>
             )
         }
 

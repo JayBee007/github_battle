@@ -113,7 +113,7 @@ class Battle extends Component {
                         avatar = {playerOneImage}
                         username = {playerOneName}>
 
-                        <button className = 'button' onClick =  {this.handleReset.bind(null,'playerOnegit')}>
+                        <button className = 'button' onClick =  {this.handleReset.bind(null,'playerOne')}>
                             Reset
                         </button>
                     </PlayerPreview>}

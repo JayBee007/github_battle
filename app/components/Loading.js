@@ -28,7 +28,7 @@ class Loading extends Component {
                     return {text : prevState.text + '.'}
                 })
             }
-        },500)
+        },this.props.speed)
     }
 
     componentWillUnmount() {
@@ -45,11 +45,13 @@ class Loading extends Component {
 }
 
 Loading.propTypes = {
-    text : PropTypes.string.isRequired
+    text : PropTypes.string.isRequired,
+    speed : PropTypes.number.isRequired
 }
 
 Loading.defaultProps = {
-    text : 'Loading'
+    text : 'Loading',
+    speed : 300
 }
 
 export default Loading
