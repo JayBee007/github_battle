@@ -132,7 +132,7 @@ class Battle extends Component {
                         <button className = 'button' onClick =  {this.handleReset.bind(null,'playerTwo')}>
                             Reset
                         </button>
-                    </PlayerPreview>}}
+                    </PlayerPreview>}
                 </div>
                 {playerOneImage && playerTwoImage &&
                     <Link className = 'button' to = {{
