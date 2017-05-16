@@ -4,11 +4,12 @@ import queryString from 'query-string'
 import {Link} from 'react-router-dom'
 
 import PlayerPreview from './PlayerPreview'
+import Loading from './Loading'
 import api from '../utils/api'
 
 function Profile(props) {
     let {info} = props
-    console.log(props)
+    
     return(
         <PlayerPreview avatar = {info.avatar_url} username = {info.login}>
             <ul className = 'space-list-items'>
@@ -85,7 +86,7 @@ class Results extends Component {
         
         if (loading === true) {
             return(
-                <p>Loading...</p>
+                <Loading />
             )
         }
 

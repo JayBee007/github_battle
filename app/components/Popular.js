@@ -1,7 +1,9 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
+
 import SelectLanguagePopular from './SelectLanguagePopular'
 import RepoGridPopular from './RepoGridPopular'
-import api from '../utils/api';
+import api from '../utils/api'
+import Loading from './Loading'
 
 class Popular extends Component {
     constructor(props){
@@ -31,7 +33,7 @@ class Popular extends Component {
                     onSelect = {this.updateLanguage} 
                 />
                 {!this.state.repos
-                 ? <h1>Loading...</h1>
+                 ? <Loading />
                  : <RepoGridPopular 
                     repos={this.state.repos}
                 />}
